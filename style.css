@@ -1,0 +1,404 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #29243b;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+:root {
+    --ungu: #7357e8;
+    --ungu-muda: #f1edff;
+    --teks: #29243b;
+    --abu: #716d80;
+}
+
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 15px #29243b0d;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--teks);
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span,
+h1 span,
+.section-title span {
+    color: var(--ungu);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul a {
+    color: var(--teks);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover {
+    color: var(--ungu);
+}
+
+.hero {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 25px;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-title {
+    color: var(--ungu);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+.hero h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.hero-text > p:not(.small-title) {
+    color: var(--abu);
+    max-width: 550px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 20px;
+    background: var(--ungu);
+    color: white;
+    border: 2px solid var(--ungu);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-outline {
+    color: var(--ungu);
+    background: white;
+}
+
+.profile-box {
+    width: 290px;
+    height: 330px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: var(--ungu-muda);
+    border: 1px solid #e5dcff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.profile-placeholder {
+    text-align: center;
+    color: var(--ungu);
+}
+
+.profile-placeholder span {
+    font-size: 76px;
+    font-weight: bold;
+}
+
+.profile-placeholder p {
+    font-size: 14px;
+}
+
+.section {
+    padding: 65px 25px;
+    scroll-margin-top: 70px;
+}
+
+.section-light {
+    background: #f8f7fc;
+}
+
+.center {
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin: 5px 0 12px;
+}
+
+.section-desc {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    text-align: center;
+    color: var(--abu);
+    font-size: 14px;
+}
+
+.about-box {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-box h3 {
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.about-box p {
+    color: var(--abu);
+    margin-bottom: 14px;
+}
+
+.biodata {
+    background: var(--ungu-muda);
+    border-radius: 15px;
+    padding: 22px;
+}
+
+.biodata p {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #ded5ff;
+    font-size: 13px;
+}
+
+.biodata p:last-child {
+    border-bottom: none;
+}
+
+.biodata strong {
+    color: var(--teks);
+}
+
+.biodata span {
+    text-align: right;
+}
+
+.card-container,
+.project-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ece9f5;
+    padding: 25px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.card:hover,
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px #40308012;
+}
+
+.card-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--ungu-muda);
+    color: var(--ungu);
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+.card h3,
+.project-card h3 {
+    margin-bottom: 8px;
+}
+
+.card p,
+.project-card p {
+    color: var(--abu);
+    font-size: 14px;
+}
+
+.project-card {
+    padding: 27px;
+    border: 1px solid #ece9f5;
+    border-radius: 15px;
+    background: white;
+    transition: 0.3s;
+}
+
+.project-number {
+    color: var(--ungu);
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--ungu-muda);
+    color: var(--ungu);
+    padding: 4px 10px;
+    margin: 15px 5px 0 0;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.contact-section {
+    background: #f8f7fc;
+}
+
+.contact-box {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-box div {
+    background: white;
+    border: 1px solid #ece9f5;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.contact-box h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-box p {
+    color: var(--abu);
+    font-size: 13px;
+}
+
+footer {
+    background: #29243b;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 55px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-box {
+        width: 230px;
+        height: 260px;
+    }
+
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+
+    .card-container,
+    .project-container,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+}
